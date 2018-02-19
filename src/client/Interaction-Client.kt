@@ -3,6 +3,7 @@ package client
 import java.io.*
 import java.net.*
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 /**
  * Created by Alex on 2/16/2018.
@@ -105,13 +106,16 @@ private fun udp(option: Int, max: Int){
         start = System.nanoTime()
         for(i in 1..rep){
             socket.send(packet)
-            println(i)
+//            socket.receive(inPacket)
+//            if(Data.checkArray(inPacket.data, ack))
+//                msg++
+            TimeUnit.MILLISECONDS.sleep(15)
         }
         socket.receive(inPacket)
         end = System.nanoTime() - start
-        Data.timeConvert(end)
         if(Data.checkArray(inPacket.data, ack))
             correct++
+        Data.timeConvert(end)
         loop++
     }
     println("$correct responses correct")

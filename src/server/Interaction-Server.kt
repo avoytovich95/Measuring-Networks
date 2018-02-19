@@ -5,6 +5,8 @@ import java.io.ObjectInputStream
 import java.io.ObjectOutputStream
 import java.net.*
 import java.util.*
+import java.util.concurrent.TimeUnit
+import kotlin.math.sign
 
 private val scan = Scanner(System.`in`)
 
@@ -88,7 +90,7 @@ private fun udp(){
     var socket: DatagramSocket
     var packet: DatagramPacket
     val ack = Data.padArray(1)
-    var outPacket: DatagramPacket
+    var outPacket = DatagramPacket(ack, ack.size)
 
     while(true){
         socket = DatagramSocket(Data.port)
@@ -99,28 +101,19 @@ private fun udp(){
         println("Waiting for packets...")
         while(true){
             try {
-//                for (i in 1..rep) {
-//                    socket.receive(packet)
-//                    if (count == 0 && msg == 0) println("Receiving packets...")
-//                    if (Data.checkArray(packet.data, byteArray))
-//                        msg++
-//                    println(i)
-//                }
-                while(true){
+                for (i in 1..rep) {
                     socket.receive(packet)
-                    if(packet.data == null)
-                        break
-                    if(Data.checkArray(packet.data, byteArray))
+                    if (Data.checkArray(packet.data, byteArray))
                         msg++
-                    println(msg)
+                    print("$msg ")
+                    //socket.send(outPacket)
                 }
-                println(packet.address)
-                println(packet.port)
-                outPacket = DatagramPacket(ack, ack.size, packet.address, packet.port)
+                outPacket.port = packet.port
+                outPacket.address = packet.address
                 socket.send(outPacket)
                 if (msg == rep)
-                    print("Y")
-                else print("N")
+                    println("\nY")
+                else println("\nN")
                 msg = 0
 
                 socket.soTimeout = 2000
