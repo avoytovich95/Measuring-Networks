@@ -89,8 +89,9 @@ private fun udp(){
     println("Starting server")
     var socket: DatagramSocket
     var packet: DatagramPacket
-    val ack = Data.padArray(1)
-    var outPacket = DatagramPacket(ack, ack.size)
+
+    val ack = ByteArray(1)
+    val outPacket = DatagramPacket(ack, ack.size)
 
     while(true){
         socket = DatagramSocket(Data.port)
@@ -102,23 +103,35 @@ private fun udp(){
         while(true){
             try {
                 for (i in 1..rep) {
-                    socket.receive(packet)
-                    if (Data.checkArray(packet.data, byteArray))
-                        msg++
-                    print("$msg ")
-                    //socket.send(outPacket)
+                    try{
+                        socket.receive(packet)
+                        if (msg == 0) socket.soTimeout = 2000
+                        if (Data.checkArray(packet.data, byteArray))
+                            msg++
+                        print("$msg ")
+                        //socket.send(outPacket)
+
+                    }catch (e: SocketTimeoutException){
+                        ack[0] = 0x0
+                        outPacket.data = ack
+                        socket.send(outPacket)
+                    }
                 }
+                ack[0] = 0x1
+                outPacket.data = ack
                 outPacket.port = packet.port
                 outPacket.address = packet.address
                 socket.send(outPacket)
+
+                socket.soTimeout = 2000
+
                 if (msg == rep)
                     println("\nY")
                 else println("\nN")
                 msg = 0
-
-                socket.soTimeout = 2000
                 count++
             }catch (e: SocketTimeoutException){
+
                 println("\nReceived $count packets.")
                 println("Socket timed out!")
                 socket.soTimeout = 0

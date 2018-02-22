@@ -97,6 +97,7 @@ private fun udp(option: Int, max: Int){
     var loop = 0
     val packet = DatagramPacket(byteArray, byteArray.size, ip, Data.port)
     val ack = ByteArray(1)
+    ack[0] = 0x1
     val inPacket = DatagramPacket(ack, ack.size, ip, Data.port)
 
     var start: Long
@@ -113,10 +114,11 @@ private fun udp(option: Int, max: Int){
         }
         socket.receive(inPacket)
         end = System.nanoTime() - start
-        if(Data.checkArray(inPacket.data, ack))
+        if(Data.checkArray(inPacket.data, ack)) {
             correct++
-        Data.timeConvert(end)
-        loop++
+            Data.timeConvert(end)
+            loop++
+        }
     }
     println("$correct responses correct")
     socket.close()

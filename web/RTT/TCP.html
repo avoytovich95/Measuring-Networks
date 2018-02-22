@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>RTT in TCP</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="blue darken-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
+      <div class="white-text">
+        <i class="material-icons">repeat</i>
+        RTT in TCP
+      </div></a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="section">
+      <div class="row">
+        <h4>Pi to Altair</h4>
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/pi-altair-1b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1B TCP</span>
+              <p>Average: 0.291620 ms/packet</p>
+            </div>
+          </div>
+        </div>  
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/pi-altair-64b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">64B TCP</span>
+              <p>Average: 0.251161 ms/packet</p>
+            </div>
+          </div>
+        </div>   
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/pi-altair-1024b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1024B TCP</span>
+              <p>Average: 0.363004 ms/packet</p>
+            </div>
+          </div>
+        </div>    
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row">
+        <h4>Laptop(LTE) to PI</h4>
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/laptop-pi-1b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1B TCP</span>
+              <p>Average: 89.023956 ms/packet</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/laptop-pi-64b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">64B TCP</span>
+              <p>Average: 86.581539 ms/packet</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/laptop-pi-1024b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1024B TCP</span>
+              <p>Average: 90.935092 ms/packet</p>
+            </div>
+          </div>
+        </div> 
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="row">
+        <h4>Desktop(Ethernet) to Pi</h4>
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/desktop-pi-1b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1B TCP</span>
+              <p>Average: 13.004683 ms/packet</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/desktop-pi-64b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1B TCP</span>
+              <p>Average: 12.108683 ms/packet</p>
+            </div>
+          </div>
+        </div> 
+
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/desktop-pi-1024b-tcp.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">1B TCP</span>
+              <p>Average: 14.996921 ms/packet</p>
+            </div>
+          </div>
+        </div> 
+
+      </div>
+    </div>
+  
+  </div> <!-- Container End -->
+
+  <footer class="page-footer blue darken-2">
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+  </body>
+</html>
