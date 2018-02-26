@@ -76,7 +76,7 @@ private fun tcp(){
     }
 }
 
-private fun udp(){
+private fun udp() {
     var rep = 0
     var byteArray = ByteArray(1)
     println("(1) 256*4KB (2) 512*2KB (3) 1024*1KB")
@@ -86,59 +86,117 @@ private fun udp(){
         2 -> { byteArray = Data.padArray(2 * 1024); rep = 512 }
         3 -> { byteArray = Data.padArray(1024); rep = 1024}
     }
-    println("Starting server")
+    println("Starting server...")
     var socket: DatagramSocket
     var packet: DatagramPacket
 
-    val ack = ByteArray(1)
+    val ack = Data.padArray(1)
     val outPacket = DatagramPacket(ack, ack.size)
-
+    var count = 0
+    var msg = 0
     while(true){
         socket = DatagramSocket(Data.port)
         packet = DatagramPacket(byteArray, byteArray.size)
 
-        var count = 0
-        var msg = 0
-        println("Waiting for packets...")
-        while(true){
+        while (true) {
             try {
+                println("Waiting for packets...")
                 for (i in 1..rep) {
-                    try{
-                        socket.receive(packet)
-                        if (msg == 0) socket.soTimeout = 2000
-                        if (Data.checkArray(packet.data, byteArray))
-                            msg++
-                        print("$msg ")
-                        //socket.send(outPacket)
-
-                    }catch (e: SocketTimeoutException){
-                        ack[0] = 0x0
-                        outPacket.data = ack
-                        socket.send(outPacket)
+                    socket.receive(packet)
+                    if (Data.checkArray(packet.data, byteArray)) {
+                        msg++
+                        print("$i ")
                     }
                 }
-                ack[0] = 0x1
-                outPacket.data = ack
-                outPacket.port = packet.port
-                outPacket.address = packet.address
-                socket.send(outPacket)
-
                 socket.soTimeout = 2000
+                outPacket.address = packet.address
+                outPacket.port = packet.port
+                socket.send(outPacket)
 
                 if (msg == rep)
                     println("\nY")
                 else println("\nN")
                 msg = 0
                 count++
-            }catch (e: SocketTimeoutException){
-
-                println("\nReceived $count packets.")
-                println("Socket timed out!")
+            } catch (e: SocketTimeoutException) {
+                println("Socket times out!")
+                println("Received $count messages")
+                count = 0
                 socket.soTimeout = 0
+
+                println("Closing connection!\n")
+                socket.close()
                 break
             }
         }
-        println("Closing connection!\n")
-        socket.close()
     }
 }
+
+//private fun udp(){
+//    var rep = 0
+//    var byteArray = ByteArray(1)
+//    println("(1) 256*4KB (2) 512*2KB (3) 1024*1KB")
+//    print("Select option: ")
+//    when(scan.nextInt()){
+//        1 -> { byteArray = Data.padArray(4 * 1024); rep = 256 }
+//        2 -> { byteArray = Data.padArray(2 * 1024); rep = 512 }
+//        3 -> { byteArray = Data.padArray(1024); rep = 1024}
+//    }
+//    println("Starting server")
+//    var socket: DatagramSocket
+//    var packet: DatagramPacket
+//
+//    val ack = ByteArray(1)
+//    val outPacket = DatagramPacket(ack, ack.size)
+//
+//    while(true){
+//        socket = DatagramSocket(Data.port)
+//        packet = DatagramPacket(byteArray, byteArray.size)
+//
+//        var count = 0
+//        var msg = 0
+//        println("Waiting for packets...")
+//        while(true){
+//            try {
+//                for (i in 1..rep) {
+//                    try{
+//                        socket.receive(packet)
+//                        if (msg == 0) socket.soTimeout = 2000
+//                        if (Data.checkArray(packet.data, byteArray))
+//                            msg++
+//                        print("$msg ")
+//                        //socket.send(outPacket)
+//
+//                    }catch (e: SocketTimeoutException){
+//                        ack[0] = 0x0
+//                        outPacket.data = ack
+//                        socket.send(outPacket)
+//                    }
+//                }
+//                ack[0] = 0x1
+//                outPacket.data = ack
+//                outPacket.port = packet.port
+//                outPacket.address = packet.address
+//                socket.send(outPacket)
+//
+//                socket.soTimeout = 2000
+//
+//                if (msg == rep)
+//                    println("\nY")
+//                else println("\nN")
+//                msg = 0
+//                count++
+//            }catch (e: SocketTimeoutException){
+//
+//                println("\nReceived $count packets.")
+//                println("Socket timed out!")
+//                socket.soTimeout = 0
+//                break
+//            }
+//        }
+//        println("Closing connection!\n")
+//        socket.close()
+//    }
+//
+//}
+

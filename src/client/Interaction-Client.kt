@@ -4,6 +4,7 @@ import java.io.*
 import java.net.*
 import java.util.*
 import java.util.concurrent.TimeUnit
+import javax.xml.stream.events.EndDocument
 
 /**
  * Created by Alex on 2/16/2018.
@@ -82,9 +83,10 @@ private fun tcp(option: Int, max: Int){
     }
 }
 
-private fun udp(option: Int, max: Int){
+private fun udp(option: Int, max: Int) {
     val socket = DatagramSocket()
     val ip = InetAddress.getByName(Data.address)
+
 
     var rep = 0
     var byteArray = ByteArray(1)
@@ -103,24 +105,64 @@ private fun udp(option: Int, max: Int){
     var start: Long
     var end: Long
     var correct = 0
-    while(loop < max){
+    while (loop < max) {
         start = System.nanoTime()
-        for(i in 1..rep){
+        for (i in 1..rep) {
             socket.send(packet)
-//            socket.receive(inPacket)
-//            if(Data.checkArray(inPacket.data, ack))
-//                msg++
-            TimeUnit.MILLISECONDS.sleep(15)
+            TimeUnit.MILLISECONDS.sleep(5)
         }
         socket.receive(inPacket)
         end = System.nanoTime() - start
-        if(Data.checkArray(inPacket.data, ack)) {
+
+        if (Data.checkArray(inPacket.data, ack))
             correct++
-            Data.timeConvert(end)
-            loop++
-        }
+        loop++
+        Data.timeConvert(end)
     }
     println("$correct responses correct")
     socket.close()
 
 }
+
+//private fun udp(option: Int, max: Int){
+//    val socket = DatagramSocket()
+//    val ip = InetAddress.getByName(Data.address)
+//
+//    var rep = 0
+//    var byteArray = ByteArray(1)
+//    when(option){
+//        1 -> { byteArray = Data.padArray(4 * 1024); rep = 256 }
+//        2 -> { byteArray = Data.padArray(2 * 1024); rep = 523 }
+//        3 -> { byteArray = Data.padArray(1024); rep = 1024}
+//    }
+//
+//    var loop = 0
+//    val packet = DatagramPacket(byteArray, byteArray.size, ip, Data.port)
+//    val ack = ByteArray(1)
+//    ack[0] = 0x1
+//    val inPacket = DatagramPacket(ack, ack.size, ip, Data.port)
+//
+//    var start: Long
+//    var end: Long
+//    var correct = 0
+//    while(loop < max){
+//        start = System.nanoTime()
+//        for(i in 1..rep){
+//            socket.send(packet)
+////            socket.receive(inPacket)
+////            if(Data.checkArray(inPacket.data, ack))
+////                msg++
+//            TimeUnit.MILLISECONDS.sleep(15)
+//        }
+//        socket.receive(inPacket)
+//        end = System.nanoTime() - start
+//        if(Data.checkArray(inPacket.data, ack)) {
+//            correct++
+//            Data.timeConvert(end)
+//            loop++
+//        }
+//    }
+//    println("$correct responses correct")
+//    socket.close()
+//
+//}

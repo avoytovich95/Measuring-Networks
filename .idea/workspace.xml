@@ -3,28 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a67494ff-a968-4aa6-a206-93a958464284" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/docs/RTT.xlsx" afterPath="$PROJECT_DIR$/docs/RTT.xlsx" />
-      <change beforePath="$PROJECT_DIR$/docs/Throughput.xlsx" afterPath="$PROJECT_DIR$/docs/Throughput.xlsx" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project-1/Data.class" afterPath="$PROJECT_DIR$/out/production/Project-1/Data.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project-1/client/Interaction_ClientKt.class" afterPath="$PROJECT_DIR$/out/production/Project-1/client/Interaction_ClientKt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project-1/client/RTT_ClientKt.class" afterPath="$PROJECT_DIR$/out/production/Project-1/client/RTT_ClientKt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project-1/client/Throughput_ClientKt.class" afterPath="$PROJECT_DIR$/out/production/Project-1/client/Throughput_ClientKt.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project-1/server/Interaction_ServerKt.class" afterPath="$PROJECT_DIR$/out/production/Project-1/server/Interaction_ServerKt.class" />
+      <change beforePath="$PROJECT_DIR$/docs/Interaction.xlsx" afterPath="$PROJECT_DIR$/docs/Interaction.xlsx" />
       <change beforePath="$PROJECT_DIR$/src/Data.kt" afterPath="$PROJECT_DIR$/src/Data.kt" />
+      <change beforePath="$PROJECT_DIR$/src/client/Interaction-Client.jar" afterPath="$PROJECT_DIR$/src/client/Interaction-Client.jar" />
       <change beforePath="$PROJECT_DIR$/src/client/Interaction-Client.kt" afterPath="$PROJECT_DIR$/src/client/Interaction-Client.kt" />
+      <change beforePath="$PROJECT_DIR$/src/server/Interaction-Server.jar" afterPath="$PROJECT_DIR$/src/server/Interaction-Server.jar" />
       <change beforePath="$PROJECT_DIR$/src/server/Interaction-Server.kt" afterPath="$PROJECT_DIR$/src/server/Interaction-Server.kt" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-laptop-pi-1024b-tcp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-laptop-pi-1024b-udp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-laptop-pi-1b-tcp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-laptop-pi-1b-udp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-laptop-pi-64b-tcp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-laptop-pi-64b-udp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-pi-altair-1024b-tcp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-pi-altair-1024b-udp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-pi-altair-1b-tcp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-pi-altair-1b-udp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-pi-altair-64b-tcp.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/img/rtt-pi-altair-64b-udp.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="52744" />
+    <option name="totalTimeSeconds" value="57241" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
   </component>
@@ -53,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Data.kt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Data.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Data.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+            <state relative-caret-position="114">
+              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -66,20 +50,20 @@
       <file leaf-file-name="Interaction-Client.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/Interaction-Client.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1027">
-              <caret line="112" column="43" lean-forward="true" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+            <state relative-caret-position="570">
+              <caret line="111" column="41" lean-forward="false" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
               <folding>
-                <element signature="e#16#106#0" expanded="true" />
+                <element signature="e#16#149#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interaction-Server.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interaction-Server.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/Interaction-Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+            <state relative-caret-position="1255">
+              <caret line="128" column="21" lean-forward="false" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -88,7 +72,7 @@
       <file leaf-file-name="RTT-Client.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/RTT-Client.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-455">
+            <state relative-caret-position="1901">
               <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
               <folding />
             </state>
@@ -98,8 +82,8 @@
       <file leaf-file-name="RTT-Server.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/RTT-Server.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-683">
-              <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="1292">
+              <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -142,9 +126,9 @@
         <option value="$PROJECT_DIR$/src/server/Throughput-Server.kt" />
         <option value="$PROJECT_DIR$/src/client/RTT-Client.kt" />
         <option value="$PROJECT_DIR$/src/server/RTT-Server.kt" />
+        <option value="$PROJECT_DIR$/src/server/Interaction-Server.kt" />
         <option value="$PROJECT_DIR$/src/client/Interaction-Client.kt" />
         <option value="$PROJECT_DIR$/src/Data.kt" />
-        <option value="$PROJECT_DIR$/src/server/Interaction-Server.kt" />
       </list>
     </option>
   </component>
@@ -155,10 +139,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="549" />
-    <option name="y" value="325" />
-    <option name="width" value="3020" />
-    <option name="height" value="1929" />
+    <option name="x" value="1489" />
+    <option name="width" value="1522" />
+    <option name="height" value="1931" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -176,9 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,6 +192,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -237,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.server.Interaction_ServerKt">
+  <component name="RunManager" selected="Kotlin.client.Interaction_ClientKt">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -437,43 +420,45 @@
       <workItem from="1519163659934" duration="165000" />
       <workItem from="1519318575536" duration="2206000" />
       <workItem from="1519325353537" duration="634000" />
+      <workItem from="1519410751752" duration="121000" />
+      <workItem from="1519665953360" duration="7024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73872000" />
+    <option name="totallyTimeSpent" value="81017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291741" sideWeight="0.49862638" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976827" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26084372" sideWeight="0.503268" order="10" side_tool="false" content_ui="tabs" x="45" y="1292" width="2900" height="542" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3755199" sideWeight="0.503268" order="5" side_tool="false" content_ui="tabs" x="45" y="1292" width="2900" height="542" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21462911" sideWeight="0.49673203" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22081044" sideWeight="0.49673203" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16449176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39988115" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39988115" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291741" sideWeight="0.49862638" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -692,17 +677,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/RTT-Client.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-455">
+        <state relative-caret-position="1901">
           <caret line="55" column="37" lean-forward="false" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
           <folding />
         </state>
@@ -710,26 +687,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/RTT-Server.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-683">
-          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="1292">
+          <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/Interaction-Server.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1255">
+          <caret line="128" column="21" lean-forward="false" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/client/Interaction-Client.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1027">
-          <caret line="112" column="43" lean-forward="true" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
+        <state relative-caret-position="570">
+          <caret line="111" column="41" lean-forward="false" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
           <folding>
-            <element signature="e#16#106#0" expanded="true" />
+            <element signature="e#16#149#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server/Interaction-Server.kt">
+    <entry file="file://$PROJECT_DIR$/src/Data.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="42" column="38" lean-forward="true" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
+        <state relative-caret-position="114">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
