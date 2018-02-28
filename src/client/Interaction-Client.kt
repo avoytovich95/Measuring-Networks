@@ -105,21 +105,23 @@ private fun udp(option: Int, max: Int) {
     var start: Long
     var end: Long
     var correct = 0
+    var msg = 0
     while (loop < max) {
         start = System.nanoTime()
         for (i in 1..rep) {
             socket.send(packet)
-            TimeUnit.MILLISECONDS.sleep(5)
+            socket.receive(inPacket)
+            if (Data.checkArray(inPacket.data, ack))
+                correct++
         }
-        socket.receive(inPacket)
+        if (correct == rep)
+            msg++
         end = System.nanoTime() - start
-
-        if (Data.checkArray(inPacket.data, ack))
-            correct++
         loop++
         Data.timeConvert(end)
+        correct = 0
     }
-    println("$correct responses correct")
+    println("$msg responses correct")
     socket.close()
 
 }

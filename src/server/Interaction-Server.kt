@@ -107,11 +107,13 @@ private fun udp() {
                         msg++
                         print("$i ")
                     }
+                    if (msg == 1) {
+                        outPacket.address = packet.address
+                        outPacket.port = packet.port
+                    }
+                    socket.send(outPacket)
                 }
                 socket.soTimeout = 2000
-                outPacket.address = packet.address
-                outPacket.port = packet.port
-                socket.send(outPacket)
 
                 if (msg == rep)
                     println("\nY")
