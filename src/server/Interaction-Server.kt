@@ -55,12 +55,14 @@ private fun tcp(){
                 for(i in 1..rep){
                     if(Data.checkArray(input.readObject() as ByteArray, byteArray))
                         msg++
+                    print("$msg ")
+                    output.writeObject(ack)
+                    output.flush()
                 }
-                output.writeObject(ack)
                 count++
                 if(msg == rep)
-                    print("Y")
-                else print("N")
+                    println("\n$count Y")
+                else println("\n$count N")
                 msg = 0
 
             }catch (e: IOException){

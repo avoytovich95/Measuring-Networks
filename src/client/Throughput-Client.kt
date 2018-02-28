@@ -47,6 +47,7 @@ fun main(args: Array<String>){
         while(loops < max) {
             start = System.nanoTime()
             output?.writeObject(bytes)
+            output?.flush()
             byteIn = input?.readObject()
             end = System.nanoTime() - start
 

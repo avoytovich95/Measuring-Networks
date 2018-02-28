@@ -3,8 +3,8 @@
  */
 object Data {
     const val port = 2698
-    //const val address = "127.0.0.1" //Local ip
-    const val address = "129.3.20.2" //altair cs server ip
+    const val address = "127.0.0.1" //Local ip
+    //const val address = "129.3.20.2" //altair cs server ip
     //const val address = "129.3.20.26" //pi cs server
 
     /** checkArray

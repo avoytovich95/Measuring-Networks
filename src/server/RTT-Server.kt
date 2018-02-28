@@ -47,6 +47,7 @@ private fun tcp(){
                 else print("N")
 
                 output.writeObject(bytes)
+                output.flush()
                 count++
             }catch(e: IOException){
                 println("\nReceived $count messages.")

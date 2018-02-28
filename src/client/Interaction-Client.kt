@@ -55,7 +55,7 @@ private fun tcp(option: Int, max: Int){
         var loops = 0
         var start: Long
         var end: Long
-        var byteIn: Any?
+        var byteIn: Any? = null
         val ack = Data.padArray(1)
         var correct = 0
 
@@ -63,8 +63,9 @@ private fun tcp(option: Int, max: Int){
             start = System.nanoTime()
             for(i in 1..rep){
                 output?.writeObject(byteArray)
+                output?.flush()
+                byteIn = input?.readObject()
             }
-            byteIn = input?.readObject()
             end = System.nanoTime() - start
             Data.timeConvert(end)
             if(Data.checkArray(byteIn as ByteArray, ack))

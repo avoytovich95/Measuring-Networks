@@ -55,6 +55,7 @@ private fun tcp(length: Int, max: Int){
         while(loops < max) {
             start = System.nanoTime()
             output?.writeObject(bytes)
+            output?.flush()
             byteIn = input?.readObject()
             end = System.nanoTime() - start
 
